@@ -1,28 +1,38 @@
-FlashBite - Sistema de Gestión de Pedidos Local
+🍕 Sabor Urbano - Landing Page & Sistema de Pedidos Local
 📝 Descripción
 
-FlashBite es una plataforma web moderna para un restaurante de comida rápida, diseñada para ofrecer una experiencia de usuario fluida y eficiente. Este proyecto simula un entorno real de pedidos donde los usuarios pueden explorar el menú, leer reseñas y realizar pedidos a través de un formulario interactivo.
+Sabor Urbano es una plataforma web desarrollada para un restaurante moderno que combina una estética visual atractiva con una funcionalidad de gestión de pedidos en tiempo real. Este proyecto fue diseñado como una solución técnica para portafolios alojados en entornos estáticos (como GitHub Pages), demostrando que es posible manejar datos dinámicos sin necesidad de un backend complejo.
 
-Lo más destacado de este proyecto es su capacidad para gestionar la persistencia de datos en el cliente. Al no depender de una base de datos externa, utiliza la Web Storage API (LocalStorage) para almacenar, listar y gestionar los pedidos directamente en el navegador. Esto permite que el proyecto sea totalmente funcional al ser alojado en entornos estáticos como GitHub Pages.
+El núcleo técnico del proyecto reside en la implementación de la Web Storage API, permitiendo que el formulario de pedidos capture la información del usuario y la persista en el navegador mediante LocalStorage. Esto garantiza que los pedidos se mantengan visibles incluso después de cerrar o refrescar la pestaña.
 🚀 Características Principales
 
-    Diseño Responsivo: Interfaz adaptada para dispositivos móviles, tablets y escritorio mediante Media Queries y Flexbox.
+    Persistencia de Datos: Implementación de lógica CRUD (Crear, Leer, Eliminar) utilizando localStorage para gestionar pedidos sin base de datos.
 
-    Gestión de Pedidos: Formulario dinámico que captura datos del cliente y del platillo seleccionado.
+    Interfaz Dinámica: Renderizado automático de tarjetas de pedidos en el DOM inmediatamente después de procesar el formulario.
 
-    Persistencia Local: Los pedidos se guardan en el navegador, permitiendo que la información no se pierda al recargar la página.
+    Diseño Responsive: Estructura fluida adaptada a móviles mediante Media Queries, asegurando que el menú y el formulario sean accesibles en cualquier dispositivo.
 
-    Panel de Administración Local: Sección que renderiza dinámicamente las tarjetas de pedidos registrados con opción de limpieza de historial.
+    Experiencia de Usuario (UX): Notificaciones de éxito mediante alertas y limpieza automática del formulario tras cada pedido para facilitar una nueva interacción.
 
-    Navegación Fluida: Menú tipo hamburguesa para móviles y efectos de desplazamiento (scroll) suaves.
+    Navegación Interactiva: Menú de navegación con efecto "sticky", sistema de scroll suave y botón de retorno al inicio.
 
 🛠️ Tecnologías Utilizadas
 
-    HTML5: Estructura semántica del sitio.
+    HTML5: Estructura semántica para mejorar el SEO y la accesibilidad.
 
-    CSS3: Estilos personalizados, animaciones y diseño adaptable.
+    CSS3: Diseño personalizado, animaciones de flotado para imágenes y uso de Flexbox para el layout.
 
-    JavaScript (Vanilla): Lógica del carrito, manipulación del DOM y manejo de localStorage.
+    JavaScript (Vanilla): Gestión de eventos del DOM, lógica de almacenamiento y control del menú responsivo.
 
-    Font Awesome: Iconografía profesional.
+    Font Awesome: Iconografía para una interfaz moderna y visual.
+
+💡 Funcionamiento del Almacenamiento
+
+Para este proyecto, se optó por LocalStorage como la solución más recomendable para un portafolio estático:
+
+    Captura: Se intercepta el evento submit del formulario para recolectar los datos.
+
+    Serialización: Los datos se convierten a formato JSON para ser almacenados como strings.
+
+    Persistencia: La información se guarda bajo la clave misPedidos, permitiendo su recuperación en cualquier sesión del navegador.
   
